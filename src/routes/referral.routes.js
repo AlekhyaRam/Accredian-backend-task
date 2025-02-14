@@ -30,8 +30,7 @@ router.post('/refer', validateReferral, async (req, res) => {
       }
     });
 
-    await sendReferralEmail(friendName, friendEmail, referrerName, courseName);
-
+   
     res.status(201).json({
       success: true,
       message: 'Referral submitted successfully',
